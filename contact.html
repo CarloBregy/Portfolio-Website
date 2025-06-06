@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Carlo Bregy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="IMG/icon.png">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="CSS/style.production.css">
+</head>
+
+<body>
+
+<header class="page-header">
+   <!-- Add Logo here -->
+   <img src="IMG/Logo.png" alt="Carlo Bregy" class="page-header__item">
+   <nav class="page-header__item">
+      <ul role="menubar" class="navigation-list">
+         <li role="presentation">
+            <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+         </li>
+         <li role="presentation">
+            <a href="about.html" role="menuitem" class="navigation-list__item">About</a>
+         </li>
+         <li role="presentation">
+            <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+         </li>
+         <li role="presentation">
+            <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+         </li>
+      </ul>
+   </nav>
+</header>
+
+<a href="mailto:Carlo.e-mail.com">Mail</a>
+<label for="phone-number">Telefon: </label>
+<a id="phone-number" href="tel:+49123456789">
+    <span class="sr-only">Call this number: </span>+49 123 456789
+</a>
+<a href="linkedin.com/in/carlo-bregy">LinkedIn</a>
+
+<form action="" method="post" id="contact-form">
+    <label class="standard-label" for="contact-email">Email: </label>
+    <input type="email" id="contact-email" required>
+  
+    <label class="standard-label" for="telephone">Telephone: </label>
+    <input type="tel" id="telephone" pattern="\d{3}[\-]\d{3}[\-]\d{4}">    
+  
+    <label class="standard-label" for="message">Message: </label>
+    <textarea maxlength="240" id="message"></textarea>
+  
+    <input type="submit" value="Send message">
+  </form>
+
+<footer class="page-footer">
+  <p>Find me on</p>
+  <div class="social-media">
+   <img src="IMG/Git.png" alt="GitHub">
+   <img src="IMG/Twitter.png" alt="Twitter">
+   <img src="IMG/LinkedIn.png" alt="LinkedIn">
+  </div>
+</footer>
+
+</body>
+
+<script src="JS/tota11y.min.js"></script>
+
+</html>
+

@@ -1,0 +1,460 @@
+
+:root {
+  --primary-color: #357b70;
+  --secondary-color: #e0b354;
+  --light-grey: rgb(206, 206, 206);
+  --dark-grey: #2b2b2b;
+  --light-red: #be9292;
+  --white: #ffffff;
+  --yellow: #eed58d;
+  --red: #f76414;
+
+  /* Font variables */
+  --font-family-main: "Lato", sans-serif;
+  --font-size-base: 18px;
+  --font-size-h1: 70px;
+  --font-size-h1-mobile: 22px;
+  --font-size-h1-desktop: 25px;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --line-height-base: 1.6;
+  --line-height-h1: 1.1;
+
+  /* Spacing variables */
+  --padding-header: 20px;
+  --margin-profile-img-right: 40px;
+  --profile-max-width: 700px;
+  --profile-img-width: 250px;
+  --border-radius-btn: 3px;
+  --border-radius-img: 0%;
+  --button-padding: 10px;
+  --grid-gap: 20px;
+  --grid-gap-mobile: 10px;
+  --flex-basis-header-item: 200px;
+  --flex-basis-profile-text: 100px;
+}
+
+a {
+  color: var(--primary-color);
+}
+
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: var(--padding-header);
+}
+
+.page-header__item {
+  flex: 0 1 var(--flex-basis-header-item);
+}
+
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.lato-regular {
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-normal);
+  font-style: normal;
+}
+
+body {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  background-color: var(--light-grey);
+  font-family: var(--font-family-main);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: var(--grid-gap);
+}
+
+.grid__item {
+  background-color: var(--light-grey);
+}
+
+.grid__item:hover {
+  transform: scale(1.05);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-h1);
+  color: var(--dark-grey);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.profile {
+  max-width: var(--profile-max-width);
+  margin: 0 auto;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* or whatever height you want */
+}
+
+.about ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.profile__portrait {
+  float: left;
+  width: var(--profile-img-width);
+  height: auto;
+  border-radius: var(--border-radius-img);
+  margin-right: var(--margin-profile-img-right);
+}
+
+a {
+  color: var(--primary-color);
+}
+
+a:visited {
+  color: var(--secondary-color);
+}
+
+a:focus, a:hover {
+  color: var(--dark-grey);
+}
+
+a:active {
+  color: var(--light-red);
+}
+
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.profile__text {
+  flex: 1 1 var(--flex-basis-profile-text);
+}
+
+.button, button {
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-decoration: none;
+  padding: var(--button-padding);
+  border-radius: var(--border-radius-btn);
+  border-bottom: 2px solid var(--dark-grey);
+  transition-duration: 0.5s;
+  transition-property: opacity;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes color-change {
+  from {
+    fill: var(--yellow);
+  }
+  to {
+    fill: var(--red);
+  }
+}
+
+.sun {
+  animation: 8s color-change infinite alternate linear;
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: var(--grid-gap-mobile);
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: var(--font-size-h1-mobile);
+  }
+}
+/*
+Colors used
+
+Text Color (Dark Gray): #2b2b2b;
+Primary Color (Purple): #357b70;
+Secondary Color (Orange): #e0b354;
+ */
+
+ .page-header {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+
+.page-header__item {
+  flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+ .lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  body {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+  grid-gap: 20px;
+}
+
+.grid__item {
+  background-color: var(--light-grey);
+}
+
+.grid__item:hover {
+  transform: scale(1.05);
+}
+
+  h1 {
+    font-size: 25px;
+    line-height: 1.1;
+  }
+
+  * {
+  box-sizing: border-box;
+}
+
+body {
+    background-color: var(--light-grey); /* Adjust the background color as needed */
+}
+
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.about {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.about ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center; /* Horizontal */
+  align-items: center;     /* Vertical (needs height) */
+  height: 100vh;     
+  }
+
+.profile__portrait {
+  float: left;
+  width: 250px; /* Adjust the size as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 0%; /* Makes the image circular */
+  margin-right: 40px; /* Space between image and text */
+}
+
+a {
+    color: var(--primary-color); /* Primary Color (Purple) */
+}
+
+a:visited {
+    color: var(--dark-grey) /* Secondary Color (Orange) */
+}
+
+a:focus, a:hover {
+    color: var(--light-red); /* Text Color (Dark Gray) */
+}
+
+a:active {
+    color: var(--light-red);
+}
+
+
+h1 {
+    font-size: 70px; /* Adjust the size as needed */
+    font-weight: 700; /* Adjust the weight as needed */
+    color: #2e2e2e; /* Adjust the color as needed */
+}
+
+.page-footer {
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.profile__text {
+    flex: 1 1 100px;
+}
+
+.button, button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the button */
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  /* width of the border, type, color */
+  border-bottom: 2px solid var(--dark-grey);
+  transition-duration: 0.5s;
+  transition-property: opacity;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes color-change {
+  from {
+    fill: var(--yellow);
+  }
+  to {
+   fill: var(--red);
+
+  }
+}
+
+.sun {
+  animation: 8s color-change infinite alternate linear;
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
