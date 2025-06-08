@@ -384,6 +384,12 @@ body {
   padding-left: 0;
 }
 
+.table-container {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
 .profile__portrait {
   float: left;
   width: 250px; /* Adjust the size as needed */
